@@ -393,8 +393,11 @@ $(function() {
 	var path = "/search.xml";
 	if(document.getElementById('local-search-input') !== null){
 		searchFunc(path, 'local-search-input', 'local-search-result');
-	}
-	
+    }
+    
+	if (!navigator.share) {
+        $('.icon-share').hide();
+    }
 	
     var typed = null;
     $('body').on('click', function(e) {
@@ -498,6 +501,17 @@ $(function() {
                 } else {
                     $('.icon-scan').addClass('tg')
                     $('#qr').qrcode({ width: 128, height: 128, text: location.href}).toggle()
+                }
+                return false;
+                break;
+            // share
+            case (tag.indexOf('icon-share') != -1):
+                if (navigator.share) {
+                    navigator.share({
+                      title: document.title,
+                      text: document.title,
+                      url: document.URL,
+                    })
                 }
                 return false;
                 break;

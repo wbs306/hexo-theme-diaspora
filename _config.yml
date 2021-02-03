@@ -7,7 +7,7 @@ menu:
   关于: /about
 
 # 是否显示目录
-TOC: false
+TOC: true
 
 # 是否自动播放音乐
 autoplay: false
@@ -22,12 +22,12 @@ welcome_cover: /img/welcome-cover.jpg
 
 # 默认文章封面图（随机调用,支持外链）
 cover: 
-  - /img/cover.jpg
+  - https://acg.yanwz.cn/api.php
   - /img/welcome-cover.jpg
 
  
 # 是否使用mathjax
-mathjax: false
+mathjax: mathjax
 
 
 # 是否关闭默认滚动条
@@ -36,23 +36,21 @@ scrollbar: true
 # 本地搜索,请将索引文件放在网站根目录,或修改主题js文件的path值
 local_search:
     # 是否启用
-    enable: false
+    enable: true
 
 # 是否显示 一言(hitokoto)
-hitokoto: true
+hitokoto: false
 
 # 链接(可选:facebook,twitter,github,wechat,email)
 links:
-    facebook: /
-    twitter: /
-    github: /
-    wechat: /img/logo.png
-    email: mailto:xxxx@gmail.com
-  
+    github: https://github.com/wbs306
+    email: mailto:wbs306@gmail.com
+    telegram: https://t.me/zeptx
+
 # 备案
 beian: 
     # 是否显示备案信息
-    enable: true
+    enable: false
     # 是否在主页面最底下显示备案信息(虽然丑，但是完全满足规定要求)
     enableFooter: false
     # 备案号
@@ -82,7 +80,7 @@ gitalk:
     distractionFreeMode: false
 
 # 网站关键字
-keywords: Fechin
+keywords: wbs
 
 # 要使用google_analytics进行统计的话，这里需要配置ID
 google_analytics: 
